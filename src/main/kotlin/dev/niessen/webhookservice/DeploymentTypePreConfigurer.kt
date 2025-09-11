@@ -36,6 +36,8 @@ object DeploymentTypePreConfigurer {
                 REST -> {
                     webApplicationType = WebApplicationType.SERVLET
                 }
+
+                else -> throw InvalidDeploymentTypeException(deploymentTypeString)
             }
 
             application.webApplicationType = webApplicationType

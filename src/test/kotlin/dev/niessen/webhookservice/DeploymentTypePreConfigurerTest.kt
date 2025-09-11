@@ -64,6 +64,15 @@ class DeploymentTypePreConfigurerTest {
         }
     }
 
+    @Test
+    fun `should fail on TEST deployment type`() {
+        setupMockEnvironment(DeploymentType.TEST.name, false)
+
+        assertThrows<InvalidDeploymentTypeException> {
+            DeploymentTypePreConfigurer.configureAppByDeploymentType(application, standardEnvironment)
+        }
+    }
+
 
     private fun setupMockEnvironment(deploymentType: String, isValidDeploymentType: Boolean = true) {
         `when`(standardEnvironment.getProperty(eq("application.deployment.type")))

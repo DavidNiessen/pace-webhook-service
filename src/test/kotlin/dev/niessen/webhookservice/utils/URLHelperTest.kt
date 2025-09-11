@@ -17,11 +17,11 @@ class URLHelperTest {
         "example.com"
     ])
     fun `constructs pace url correctly with current millis`(url: String) {
-        val constructedUrl = URLHelper.constructPaceUrl(url, pacePath, 883)
+        val constructedUrl = URLHelper.constructPaceUrl(url, pacePath, 443)
         val currentMillis = Instant.now().toEpochMilli()
         val currentMillisSubString = currentMillis.toString().substring(0, 5)
 
-        assertThat(constructedUrl.toString(), startsWith("https://$url:883/api/foodfinder/list?_=$currentMillisSubString"))
+        assertThat(constructedUrl.toString(), startsWith("https://$url:443/api/foodfinder/list?_=$currentMillisSubString"))
     }
 
     @Test
