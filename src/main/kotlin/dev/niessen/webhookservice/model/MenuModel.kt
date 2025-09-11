@@ -11,7 +11,7 @@ data class MenuModel(
 
 enum class MenuRestaurant(val value: String) {
     PAPA("Papa"),
-    CANTEEN("Canteen"),
+    CANTEEN("Kantine"),
     DINER("Diner"),
     CAFE("Cafe"),
     JOURNALIST_CLUB("Journalisten Club"),
