@@ -36,7 +36,8 @@ enum class MenuRestaurant(val value: String) {
 enum class MenuProperty(val value: String) {
     VEGAN("Vegan"),
     VEGETARIAN("Vegetarisch"),
-    PORK("Schweinefleisch");
+    PORK("Schweinefleisch"),
+    NO_SUGAR("Ohne Zucker");
 
     companion object {
         fun byName(name: String?): MenuProperty? {
@@ -44,6 +45,7 @@ enum class MenuProperty(val value: String) {
                 name.equals("vegan", true) -> VEGAN
                 name.equals("vegetarisch", true) -> VEGETARIAN
                 name.equals("schwein", true) -> PORK
+                name.equals("ohne_zucker", true) -> NO_SUGAR
                 else -> null
             }
         }

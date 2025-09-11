@@ -25,6 +25,7 @@ class MenuModelTest {
         assertThat(MenuProperty.byName("vegan"), `is`(VEGAN))
         assertThat(MenuProperty.byName("vegEtarIsch"), `is`(VEGETARIAN))
         assertThat(MenuProperty.byName("schwein"), `is`(PORK))
+        assertThat(MenuProperty.byName("ohne_zucker"), `is`(NO_SUGAR))
         assertThat(MenuProperty.byName("123"), nullValue())
     }
 }
