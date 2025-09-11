@@ -1,0 +1,1399 @@
+{
+  "daySelector": [
+    {
+      "date": "2025-09-04",
+      "day": "Donnerstag",
+      "CalendarWeek": "36",
+      "date_de": "04.09.2025"
+    },
+    {
+      "date": "2025-09-05",
+      "day": "Freitag",
+      "CalendarWeek": "36",
+      "date_de": "05.09.2025"
+    },
+    {
+      "date": "2025-09-06",
+      "day": "Samstag",
+      "CalendarWeek": "36",
+      "date_de": "06.09.2025"
+    },
+    {
+      "date": "2025-09-07",
+      "day": "Sonntag",
+      "CalendarWeek": "36",
+      "date_de": "07.09.2025"
+    },
+    {
+      "date": "2025-09-08",
+      "day": "Montag",
+      "CalendarWeek": "37",
+      "date_de": "08.09.2025"
+    },
+    {
+      "date": "2025-09-09",
+      "day": "Dienstag",
+      "CalendarWeek": "37",
+      "date_de": "09.09.2025"
+    },
+    {
+      "date": "2025-09-10",
+      "day": "Mittwoch",
+      "CalendarWeek": "37",
+      "date_de": "10.09.2025"
+    },
+    {
+      "date": "2025-09-11",
+      "day": "Donnerstag",
+      "CalendarWeek": "37",
+      "date_de": "11.09.2025"
+    },
+    {
+      "date": "2025-09-12",
+      "day": "Freitag",
+      "CalendarWeek": "37",
+      "date_de": "12.09.2025"
+    },
+    {
+      "date": "2025-09-13",
+      "day": "Samstag",
+      "CalendarWeek": "37",
+      "date_de": "13.09.2025"
+    },
+    {
+      "date": "2025-09-14",
+      "day": "Sonntag",
+      "CalendarWeek": "37",
+      "date_de": "14.09.2025"
+    },
+    {
+      "date": "2025-09-15",
+      "day": "Montag",
+      "CalendarWeek": "37",
+      "date_de": "15.09.2025"
+    },
+    {
+      "date": "2025-09-16",
+      "day": "Dienstag",
+      "CalendarWeek": "37",
+      "date_de": "16.09.2025"
+    },
+    {
+      "date": "2025-09-17",
+      "day": "Mittwoch",
+      "CalendarWeek": "37",
+      "date_de": "17.09.2025"
+    },
+    {
+      "date": "2025-09-18",
+      "day": "Donnerstag",
+      "CalendarWeek": "37",
+      "date_de": "18.09.2025"
+    },
+    {
+      "date": "2025-09-19",
+      "day": "Freitag",
+      "CalendarWeek": "37",
+      "date_de": "19.09.2025"
+    },
+    {
+      "date": "2025-09-22",
+      "day": "Montag",
+      "CalendarWeek": "37",
+      "date_de": "22.09.2025"
+    },
+    {
+      "date": "2025-09-23",
+      "day": "Dienstag",
+      "CalendarWeek": "37",
+      "date_de": "23.09.2025"
+    },
+    {
+      "date": "2025-09-24",
+      "day": "Mittwoch",
+      "CalendarWeek": "37",
+      "date_de": "24.09.2025"
+    },
+    {
+      "date": "2025-09-25",
+      "day": "Donnerstag",
+      "CalendarWeek": "37",
+      "date_de": "25.09.2025"
+    }
+  ],
+  "outlets": [
+    {
+      "key": "cafe",
+      "name": "CAFE",
+      "outletURL": "https://pace.berlin/gastronomie/cafe/",
+      "outletLocation": "Axel-Springer-Neubau, EG",
+      "openingtext_de": "montags bis freitags 10:00–17:00 Uhr",
+      "openingtext_en": "monday to friday 10:00 am–05:00 pm",
+      "openingtext_lg_de": "montags bis freitags\r\n10:00–17:00 Uhr",
+      "openingtext_lg_en": "monday to friday\r\n10:00 am–05:00 pm\r\n",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "10:00",
+          "open_to": "17:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "10:00",
+          "open_to": "17:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "10:00",
+          "open_to": "17:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "10:00",
+          "open_to": "17:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "10:00",
+          "open_to": "17:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "Iced Latte Macchiato",
+          "line1_en": "Iced Latte Macchiato",
+          "line2_de": "Red Velvet Cake mit Creamcheese Frosting, Pflaumenmus-Croffin mit Vanilleschmand, Apfel-Vanille-Kokoscreme-Pastete",
+          "line2_en": "Red Velvet Cake with Creamcheese Frosting, Plum jam Croffin with vanilla sour cream, Apple Vanilla Coconut Cream Pie"
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "Iced Latte Macchiato",
+          "line1_en": "Iced Latte Macchiato",
+          "line2_de": "Red Velvet Cake mit Creamcheese Frosting, Pflaumenmus-Croffin mit Vanilleschmand, Apfel-Vanille-Kokoscreme-Pastete",
+          "line2_en": "Red Velvet Cake with Creamcheese Frosting, Plum jam Croffin with vanilla sour cream, Apple Vanilla Coconut Cream Pie"
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "Iced Latte Macchiato",
+          "line1_en": "Iced Latte Macchiato",
+          "line2_de": "Red Velvet Cake mit Creamcheese Frosting, Pflaumenmus-Croffin mit Vanilleschmand, Apfel-Vanille-Kokoscreme-Pastete",
+          "line2_en": "Red Velvet Cake with Creamcheese Frosting, Plum jam Croffin with vanilla sour cream, Apple Vanilla Coconut Cream Pie"
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "Iced Latte Macchiato",
+          "line1_en": "Iced Latte Macchiato",
+          "line2_de": "Red Velvet Cake mit Creamcheese Frosting, Pflaumenmus-Croffin mit Vanilleschmand, Apfel-Vanille-Kokoscreme-Pastete",
+          "line2_en": "Red Velvet Cake with Creamcheese Frosting, Plum jam Croffin with vanilla sour cream, Apple Vanilla Coconut Cream Pie"
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "Iced Latte Macchiato",
+          "line1_en": "Iced Latte Macchiato",
+          "line2_de": "Red Velvet Cake mit Creamcheese Frosting, Pflaumenmus-Croffin mit Vanilleschmand, Apfel-Vanille-Kokoscreme-Pastete",
+          "line2_en": "Red Velvet Cake with Creamcheese Frosting, Plum jam Croffin with vanilla sour cream, Apple Vanilla Coconut Cream Pie"
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "1"
+    },
+    {
+      "key": "canteen",
+      "name": "CANTEEN",
+      "outletURL": "https://pace.berlin/gastronomie/canteen/",
+      "outletLocation": "",
+      "openingtext_de": "montags bis freitags 12:00–14:30 Uhr und 17:00-19:00 Uhr, samstags 12:00-14:30 Uhr, sonntags 12:00–14:30 Uhr und 17:00-19:00 Uhr",
+      "openingtext_en": "monday to friday 12:00 am–2:30 pm and 5:00 -7:00 pm, saturday 12:00-2:30 pm, sunday 12:00-2:30 pm and 5:00-7:00 pm",
+      "openingtext_lg_de": "montags bis freitags\r\n12:00–14:30 Uhr und 17:00-19:00 Uhr\r\n\r\nsamstags 12:00-14:30 Uhr\r\n\r\nsonntags und feiertags 12:00-14:30 Uhr und 17:00-19:00 Uhr",
+      "openingtext_lg_en": "monday to friday\r\n12:00 am–2:30 pm and 5:00 -7:00 pm\r\nsaturday 12:00-2:30 pm\r\nsunday and holidays 12:00-2:30 pm and 5:00-7:00 pm",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "saturday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "1"
+    },
+    {
+      "key": "deli",
+      "name": "DELI",
+      "outletURL": "https://pace.berlin/gastronomie/ƒ/",
+      "outletLocation": "Axel-Springer-Neubau, EG",
+      "openingtext_de": "montags bis freitags 08:00–16:00 Uhr",
+      "openingtext_en": "monday to friday, 08:00 am–4:00 pm",
+      "openingtext_lg_de": "montags bis freitags 08:00–16:00 Uhr",
+      "openingtext_lg_en": "monday to friday, 08:00 am–4:00 pm",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "11:00",
+          "open_to": "19:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "08:00",
+          "open_to": "16:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "08:00",
+          "open_to": "16:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "08:00",
+          "open_to": "16:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "08:00",
+          "open_to": "16:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "08:00",
+          "open_to": "16:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "11:00",
+          "open_to": "17:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "1"
+    },
+    {
+      "key": "diner",
+      "name": "DINER",
+      "outletURL": "https://pace.berlin/gastronomie/diner/",
+      "outletLocation": "Axel-Springer-Neubau, EG",
+      "openingtext_de": "montags bis freitags 12:00–14:30 Uhr und 17:00-19:00 Uhr, samstags 12:00-14:30 Uhr, sonntags 12:00–14:30 Uhr und 17:00-19:00 Uhr",
+      "openingtext_en": "monday to friday 12:00 am–2:30 pm and 5:00 -7:00 pm, saturday 12:00-2:30 pm, sunday 12:00-2:30 pm and 5:00-7:00 pm",
+      "openingtext_lg_de": "montags bis freitags\r\n12:00–14:30 Uhr und 17:00-19:00 Uhr\r\n\r\nsamstags 12:00-14:30 Uhr\r\n\r\nsonntags und feiertags 12:00-14:30 Uhr und 17:00-19:00 Uhr",
+      "openingtext_lg_en": "monday to friday\r\n12:00 am–2:30 pm and 5:00 -7:00 pm\r\n\r\nsaturday 12:00-2:30 pm\r\n\r\nsunday and holidays 12:00-2:30 pm and 5:00-7:00 pm",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "17:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "17:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "17:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "17:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "17:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "saturday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "0"
+    },
+    {
+      "key": "journalistenclub",
+      "name": "JOURNALISTENCLUB",
+      "outletURL": "https://pace.berlin/gastronomie/der-journalistenclub-im-axel-springer-hochhaus/",
+      "outletLocation": "",
+      "openingtext_de": "Bibliothek: montags bis freitags 12:00–15:00 Uhr (Lunchservice) außerhalb dieser Zeiten nur mit Reservierung,  Ullstein-Bar: montags bis freitags 09:00–22:00 Uhr",
+      "openingtext_en": "Bibliothek: monday to friday 12:00–03:00 pm (lunch service) outside these times only with reservation,  Ullstein-Bar:strong, monday to friday 09:00 am–10:00 pm",
+      "openingtext_lg_de": "Bibliothek\r\nmontags bis freitags\r\n12:00–15:00 Uhr (Lunchservice)\r\naußerhalb dieser Zeiten nur mit Reservierung\r\n\r\nUllstein-Bar, \r\nmontags bis freitags\r\n09:00–22:00 Uhr\r\n",
+      "openingtext_lg_en": "Bibliothek\r\nmonday to friday\r\n12:00–03:00 pm (lunch service)\r\noutside these times only with reservation\r\n\r\nUllstein-Bar,\r\nmonday to friday\r\n09:00 am–10:00 pm",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:59",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:59",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:59",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:59",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:59",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "1"
+    },
+    {
+      "key": "kitchen",
+      "name": "KITCHEN",
+      "outletURL": "",
+      "outletLocation": "",
+      "openingtext_de": "",
+      "openingtext_en": "",
+      "openingtext_lg_de": "",
+      "openingtext_lg_en": "",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "monday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "friday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "0"
+    },
+    {
+      "key": "papa",
+      "name": "PAPA",
+      "outletURL": "https://pace.berlin/gastronomie/papa/",
+      "outletLocation": "X8 (ehemals Axel-Springer-Passage), Zimmerstraße 30, 10969 Berlin",
+      "openingtext_de": "montags bis freitags 12:00-14:30Uhr",
+      "openingtext_en": "monday to friday 12:00 am–2:30 pm",
+      "openingtext_lg_de": "montags bis freitags\r\n12:00–14:30 Uhr",
+      "openingtext_lg_en": "monday to friday\r\n12:00 am–2:30 pm",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "12:00",
+          "open_to": "19:00",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "12:00",
+          "open_to": "14:30",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": {
+        "drinks": [
+          {
+            "item_name": "GRAPOS 0,2 l",
+            "item_price": "1.10",
+            "item_description": "verschiedene Sorten / vegan"
+          },
+          {
+            "item_name": "Club Mate 0,33 l",
+            "item_price": "2.10",
+            "item_description": ""
+          },
+          {
+            "item_name": "Rixdorfer Fassbrause 0,33 l ",
+            "item_price": "2.10",
+            "item_description": ""
+          },
+          {
+            "item_name": "Cola &amp; Fanta 0,4 l",
+            "item_price": "1.90",
+            "item_description": "verschiedene Sorten"
+          },
+          {
+            "item_name": "Viva con Agua",
+            "item_price": "1.80",
+            "item_description": "mit und ohne Kohlensäure"
+          },
+          {
+            "item_name": "Vollmilch 02, L 3,5%",
+            "item_price": "1.00",
+            "item_description": ""
+          },
+          {
+            "item_name": "Proviant Limo",
+            "item_price": "2.10",
+            "item_description": "Diverse Sorten"
+          },
+          {
+            "item_name": "Proviant Schorle",
+            "item_price": "2.10",
+            "item_description": "Diverse Sorten"
+          }
+        ]
+      },
+      "show_on_webspeiseplan": "1"
+    },
+    {
+      "key": "rem",
+      "name": "REM",
+      "outletURL": "https://pace.berlin/gastronomie/rem/",
+      "outletLocation": "Axel-Springer-Neubau, 11. OG",
+      "openingtext_de": "montags bis freitags 12:00–21:30 Uhr (ACHTUNG: Food &amp; Drink Container öffnen unterschiedlich)",
+      "openingtext_en": "monday to friday  12:00 am–9:30 pm (Food &amp; Drink Container vary in opening hours)",
+      "openingtext_lg_de": "montags bis freitags\r\nGetränke:  Mo–Fr 12:00–21:30 Uhr (Drink Container)\r\nFood: Di–Do 17:00–20:00 Uhr (Food Container)\r\nAfter Work: jeden Donnerstag, sofern das Wetter mitspielt",
+      "openingtext_lg_en": "monday to friday\r\n12:00 am–09:30 pm (Drink Container)\r\n05:00 pm–08:00 pm (Food Container)\r\nAfter Work: every Thursday, as long as weather conditions allow",
+      "business_data": {
+        "restaurant": {
+          "spelled_out_name": "",
+          "serves_cuisine": "German",
+          "accepts_reservation": "True",
+          "price_range": "$",
+          "author_type": "Person",
+          "author_name": "",
+          "telephone": "",
+          "email": ""
+        },
+        "address": {
+          "street": "Zimmerstraße 50",
+          "city": "Berlin",
+          "region": "BER",
+          "postal_code": "10115",
+          "country": "Germany"
+        },
+        "geo_coordinates": {
+          "latitude": "",
+          "longitude": ""
+        },
+        "images": {
+          "image_1_1": "",
+          "image_4_3": "",
+          "image_16_9": ""
+        }
+      },
+      "business_times": [
+        {
+          "weekday": "sunday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        },
+        {
+          "weekday": "monday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "21:30",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "22:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "22:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "22:00",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "friday",
+          "open": 1,
+          "open_from": "12:00",
+          "open_to": "21:30",
+          "closedtext_de": "",
+          "closedtext_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "open": 0,
+          "open_from": "",
+          "open_to": "",
+          "closedtext_de": "--GESCHLOSSEN--",
+          "closedtext_en": "--CLOSED--"
+        }
+      ],
+      "weekview": [
+        {
+          "weekday": "sunday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "monday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "tuesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "wednesday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "thursday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "friday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        },
+        {
+          "weekday": "saturday",
+          "line1_de": "",
+          "line1_en": "",
+          "line2_de": "",
+          "line2_en": ""
+        }
+      ],
+      "addItems": [],
+      "show_on_webspeiseplan": "1"
+    }
+  ],
+  "date": {
+    "date_iso": "2025-09-11",
+    "date_tomorrow_iso": "2025-09-12",
+    "date_de": "11.09.2025",
+    "datetime_iso": "2025-09-11 15:22:44",
+    "datetime_tomorrow_iso": "2025-09-12 15:22:44",
+    "datetime_de": "11.09.2025 15:22:44",
+    "current_time": "15:22:44",
+    "weekday": "thursday"
+  },
+  "sliders": [
+    {
+      "id": "53a0c50f-89bf-11ed-b70d-52540096ea6a",
+      "name": "Veganuary",
+      "description": "Veganuary slider",
+      "set_filter": {
+        "key": "F9vzQe47ljO"
+      },
+      "times": {
+        "start_date": "2023-01-01",
+        "start_time": "00:01",
+        "end_date": "2023-01-31",
+        "end_time": "23:59",
+        "only_weekdays": null,
+        "only_dates": null,
+        "only_timerange": null
+      },
+      "slider": {
+        "text_de": "<div class=\"veganuary\"><img src=\"https://api.pace.berlin/cdn/img/c2a_yeahveganuary.png\" class=\"img-fluid\"></div>",
+        "text_en": "<div class=\"veganuary\"><img src=\"https://api.pace.berlin/cdn/img/c2a_yeahveganuary.png\" class=\"img-fluid\"></div>",
+        "cta_text_de": "Jawoll, bin dabei",
+        "cta_text_en": "Yes, I'm in",
+        "cta_cancel_de": "Mir doch Wurst",
+        "cta_cancel_en": " I don't care",
+        "cta_url": ""
+      }
+    }
+  ]
+}
