@@ -1,4 +1,4 @@
-package dev.niessen.webhookservice.richtext.slack
+package dev.niessen.webhookservice.richtext
 
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat

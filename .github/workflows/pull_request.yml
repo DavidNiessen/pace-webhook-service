@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+
+env:
+  JAVA_VERSION: 21
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup java
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'zulu'
+          cache: 'yarn'
+
+      - name: Run tests
+        timeout-minutes: 30
+        run: ./gradlew test

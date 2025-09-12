@@ -1,15 +1,14 @@
 package dev.niessen.webhookservice.utils
 
 import dev.niessen.webhookservice.model.MenuProperty
-import dev.niessen.webhookservice.model.MenuProperty.*
+import dev.niessen.webhookservice.properties.IconProperties
+import org.springframework.stereotype.Component
 
-object IconUtil {
+@Component
+class IconUtil(
+    private val properties: IconProperties
+) {
 
-    // TODO replace hardcoded urls
-    fun propertyToIconUrl(property: MenuProperty): String = when (property) {
-        VEGAN -> "https://github.com/DavidNiessen/pace-webhook-service/blob/main/assets/icons/vegan.png?raw=true"
-        VEGETARIAN -> "https://github.com/DavidNiessen/pace-webhook-service/blob/main/assets/icons/vegeterian.png?raw=true"
-        PORK -> "https://github.com/DavidNiessen/pace-webhook-service/blob/main/assets/icons/pork.png?raw=true"
-        NO_SUGAR -> "https://github.com/DavidNiessen/pace-webhook-service/blob/main/assets/icons/sugar_free.png?raw=true"
-    }
+    fun propertyToIconUrl(property: MenuProperty): String? =
+        properties.urls[property.propertyKey]
 }

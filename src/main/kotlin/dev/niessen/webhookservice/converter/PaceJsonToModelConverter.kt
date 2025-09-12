@@ -5,12 +5,15 @@ import dev.niessen.webhookservice.exception.exceptions.InvalidJsonFieldException
 import dev.niessen.webhookservice.model.MenuModel
 import dev.niessen.webhookservice.model.MenuProperty
 import dev.niessen.webhookservice.model.MenuRestaurant
+import dev.niessen.webhookservice.properties.PaceProperties
 import dev.niessen.webhookservice.utils.TimeUtils
 import org.springframework.stereotype.Component
 import java.time.LocalDate
 
 @Component
-class PaceJsonToModelConverter {
+class PaceJsonToModelConverter(
+    private val paceProperties: PaceProperties,
+) {
 
     private val timeUtils = TimeUtils()
 
@@ -18,17 +21,29 @@ class PaceJsonToModelConverter {
         val currentDateString = getCurrentDateString(json)
         val menuItems = getTodaysMenuItems(json, currentDateString)
 
-        return menuItems.map { convertToMenuItem(it) }
+        return menuItems.mapNotNull { runCatching { convertToMenuItem(it) }.getOrNull() }
     }
 
-    private fun convertToMenuItem(jsonNode: JsonNode): MenuModel {
-        val menuNameAndDescription = jsonNode.get("GastDesc_de")?.asText(null) ?: throw InvalidJsonFieldException("GastDesc_de")
+    private fun convertToMenuItem(jsonNode: JsonNode): MenuModel? {
+        val menuNameAndDescription =
+            jsonNode.get("GastDesc_de")?.asText(null) ?: throw InvalidJsonFieldException("GastDesc_de")
 
         val (menuName, menuDescription) = parseMenuNameAndDescription(menuNameAndDescription)
         val restaurant = MenuRestaurant.byName(jsonNode.get("outlet")?.asText(null))
 
+        val mealTime = jsonNode.get("mealtime")?.asText(null)
+
+        if (paceProperties.mealtimeWhitelist.none { it.equals(mealTime, true) }) {
+            return null
+        }
+
         val subtitle = jsonNode.get("MenuName")?.asText(null)
-        val price = jsonNode.get("ProductPrice")?.asText(null)?.run { this + "€" }
+
+        if (paceProperties.menuLabelBlacklist.any { subtitle?.startsWith(it, true) == true }) {
+            return null
+        }
+
+        val price = jsonNode.get("ProductPrice")?.asDouble(-1.0).takeIf { it?.let { it > 0 } == true }
         val properties = parseProperties(jsonNode)
 
         return MenuModel(

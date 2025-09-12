@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import dev.niessen.webhookservice.exception.exceptions.InvalidJsonFieldException
 import dev.niessen.webhookservice.model.MenuProperty
 import dev.niessen.webhookservice.model.MenuRestaurant
+import dev.niessen.webhookservice.properties.PaceProperties
 import dev.niessen.webhookservice.utils.TimeUtils
 import org.hamcrest.CoreMatchers.*
 import org.hamcrest.MatcherAssert.assertThat
@@ -33,7 +34,21 @@ class PaceJsonToModelConverterTest {
 
     @BeforeEach
     fun setUp() {
-        converter = PaceJsonToModelConverter()
+        converter = PaceJsonToModelConverter(
+            PaceProperties(
+                host = "host",
+                path = "path",
+                port = 443,
+                apiKey = "apiKEy",
+                timeoutMs = 0,
+                userAgent = "userAgent",
+                https = true,
+                cacheTtlMs = 0,
+                restaurantWhitelist = setOf(MenuRestaurant.PAPA, MenuRestaurant.CANTEEN),
+                mealtimeWhitelist = setOf("Mittagessen"),
+                menuLabelBlacklist = setOf("SAFT"),
+            )
+        )
 
         `when`(timeUtils.currentDay()).thenAnswer { 254 }
 
@@ -44,7 +59,7 @@ class PaceJsonToModelConverterTest {
     fun `convert to models success`() {
         val json = setupJson("responses/pace_response.json")
         val items = converter.convert(json)
-        assertThat(items, hasSize(49))
+        assertThat(items, hasSize(41))
 
         // assert single item
         val item = items.find { it.menuName == "Gegrillte Zucchini" }
@@ -52,7 +67,7 @@ class PaceJsonToModelConverterTest {
         assertThat(item.restaurant, `is`(MenuRestaurant.CANTEEN))
         assertThat(item.description, `is`("Halloumi | Kapern-Zitronen-Dressing"))
         assertThat(item.subtitle, `is`("COUNTER 1.1 Bowls_"))
-        assertThat(item.price, `is`("11.00€"))
+        assertThat(item.price, `is`(11.0))
         // assert item properties
         val properties = item.properties
         assertThat(properties, hasSize(1))
@@ -64,7 +79,7 @@ class PaceJsonToModelConverterTest {
         val json = setupJson("responses/pace_response_invalid_1.json")
         val items = converter.convert(json)
         assertThat(items, notNullValue())
-        assertThat(items, hasSize(49))
+        assertThat(items, hasSize(41))
 
         // property "MenuName" was removed, but converter should still continue
         val item = items.find { it.menuName == "Chocolate-Lava-Cookie" }
@@ -84,13 +99,10 @@ class PaceJsonToModelConverterTest {
     @Test
     fun `should skip item if can't find critical property in single item`() {
         val json = setupJson("responses/pace_response_invalid_3.json")
-        assertThrows<InvalidJsonFieldException> {
-            val items = converter.convert(json)
+        val items = converter.convert(json)
 
-            assertThat(items, notNullValue())
-            assertThat(items, hasSize(48))
-        }
-
+        assertThat(items, notNullValue())
+        assertThat(items, hasSize(40))
     }
 
     private fun setupJson(fileName: String): JsonNode {

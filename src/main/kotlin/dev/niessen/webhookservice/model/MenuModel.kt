@@ -5,7 +5,7 @@ data class MenuModel(
     val restaurant: MenuRestaurant, // PAPA, CANTEEN
     val description: String?, // veganer Pflaumencrumble + Vanillecreme
     val subtitle: String?, // DESSERTS_
-    val price: String?, // 1.70€
+    val price: Double?, // 1.70
     val properties: List<MenuProperty> = mutableListOf(),
 )
 
@@ -33,11 +33,11 @@ enum class MenuRestaurant(val value: String) {
     }
 }
 
-enum class MenuProperty(val value: String) {
-    VEGAN("Vegan"),
-    VEGETARIAN("Vegetarisch"),
-    PORK("Schweinefleisch"),
-    NO_SUGAR("Ohne Zucker");
+enum class MenuProperty(val value: String, val propertyKey: String) {
+    VEGAN("Vegan", "vegan"),
+    VEGETARIAN("Vegetarisch", "vegetarian"),
+    PORK("Schweinefleisch", "pork"),
+    NO_SUGAR("Ohne Zucker", "no_sugar");
 
     companion object {
         fun byName(name: String?): MenuProperty? {

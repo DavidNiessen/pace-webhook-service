@@ -1,4 +1,4 @@
-package dev.niessen.webhookservice.richtext.slack
+package dev.niessen.webhookservice.richtext
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import dev.niessen.webhookservice.exception.exceptions.JsonParseException
@@ -50,11 +50,13 @@ fun Block.toJson(): Map<String, Any> = when (this) {
             "emoji" to text.emoji
         )
     )
+
     is DividerBlock -> mapOf("type" to "divider")
     is ContextBlock -> mapOf(
         "type" to "context",
         "elements" to elements.map { it.toJson() }
     )
+
     is SectionBlock -> mapOf(
         "type" to "section",
         "text" to mapOf(
@@ -71,10 +73,14 @@ fun Element.toJson(): Map<String, Any> = when (this) {
 }
 
 fun slackMessage(build: SlackMessageBuilder.() -> Unit): String {
-    val jsonString = objectMapper.writeValueAsString(SlackMessageBuilder().apply(build).build())
-    if (jsonString.isNullOrBlank()) {
-        throw JsonParseException(jsonString, false)
-    }
+    val map = SlackMessageBuilder().apply(build).build()
 
-    return jsonString
+    runCatching {
+        val jsonString = objectMapper.writeValueAsString(map)
+        if (jsonString.isNullOrBlank()) {
+            throw JsonParseException(jsonString, false)
+        }
+
+        return jsonString
+    }.getOrElse { throw JsonParseException(map.toString(), false) }
 }

@@ -1,7 +1,7 @@
 package dev.niessen.webhookservice.repository
 
-import dev.niessen.webhookservice.exception.exceptions.PaceRequestException
-import dev.niessen.webhookservice.testutils.IntegrationTestBase
+import dev.niessen.webhookservice.IntegrationTestBase
+import dev.niessen.webhookservice.exception.exceptions.RequestException
 import org.hamcrest.CoreMatchers.*
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @ExtendWith(SpringExtension::class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 class PaceRepositoryIT: IntegrationTestBase() {
@@ -32,7 +32,7 @@ class PaceRepositoryIT: IntegrationTestBase() {
 
     @Test
     fun `fetchPaceJson should throw ServiceException if invalid api key`() {
-        val exception = assertThrows<PaceRequestException> {
+        val exception = assertThrows<RequestException> {
             repository.properties.apiKey = "invalidapikey"
             repository.init()
             repository.fetchPaceJson()
@@ -41,5 +41,4 @@ class PaceRepositoryIT: IntegrationTestBase() {
         assertThat(exception.statusCode, `is`(HttpStatus.INTERNAL_SERVER_ERROR))
         assertThat(exception.message, containsString("401"))
     }
-
 }
