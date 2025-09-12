@@ -45,9 +45,7 @@ or injected via environment (recommended)
 ### REST Endpoints
 
 For the REST endpoints to be enabled, please make sure that the deployment type is set to `REST`
-
-Endpoints:
-
+<br><br>
 Fetch menu and dispatch via WebHooks
 > GET http://localhost:8080/api/v1/dispatch
 
