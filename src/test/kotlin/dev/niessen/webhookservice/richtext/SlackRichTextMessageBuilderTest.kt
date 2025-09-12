@@ -6,12 +6,13 @@ import dev.niessen.webhookservice.model.MenuRestaurant.CANTEEN
 import dev.niessen.webhookservice.model.MenuRestaurant.PAPA
 import dev.niessen.webhookservice.properties.IconProperties
 import dev.niessen.webhookservice.utils.IconUtil
+import dev.niessen.webhookservice.utils.TimeUtils
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
 import org.slf4j.LoggerFactory
 
-class SlackRichTextMessageFactoryBuilderTest {
+class SlackRichTextMessageBuilderTest {
 
     private val logger = LoggerFactory.getLogger(javaClass)
 
@@ -22,7 +23,7 @@ class SlackRichTextMessageFactoryBuilderTest {
             PORK.propertyKey to "localhost/pork",
             // don't define url for no_sugar
         )
-    )))
+    )), TimeUtils())
 
     @Test
     fun `build slack menu message`() {

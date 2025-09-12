@@ -13,15 +13,14 @@ import org.springframework.stereotype.Component
 class SlackRichTextMessageBuilder(
     @Value("\${application.formatted-version}") val appVersion: String,
     val iconUtil: IconUtil,
+    val timeUtils: TimeUtils
 ) : RichTextMessageBuilder {
-
-    private val timeUtils = TimeUtils()
 
     override fun webHookType() = WebHookType.SLACK
 
     override fun buildMessage(menu: List<MenuModel>): String {
         val grouped = menu.groupBy { it.restaurant }
-        val formattedDate = timeUtils.formattedDate()
+        val formattedDate = timeUtils.formatDate(timeUtils.today())
 
         return slackMessage {
             // -- HEADER

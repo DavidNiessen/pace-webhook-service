@@ -20,6 +20,7 @@ import org.mockito.junit.jupiter.MockitoExtension
 import org.springframework.test.util.ReflectionTestUtils
 import wiremock.org.apache.commons.io.IOUtils
 import java.nio.charset.StandardCharsets
+import java.time.LocalDate
 
 @ExtendWith(MockitoExtension::class)
 class PaceJsonToModelConverterTest {
@@ -47,10 +48,11 @@ class PaceJsonToModelConverterTest {
                 restaurantWhitelist = setOf(MenuRestaurant.PAPA, MenuRestaurant.CANTEEN),
                 mealtimeWhitelist = setOf("Mittagessen"),
                 menuLabelBlacklist = setOf("SAFT"),
-            )
+            ),
+            TimeUtils()
         )
 
-        `when`(timeUtils.currentDay()).thenAnswer { 254 }
+        `when`(timeUtils.today()).thenAnswer { LocalDate.of(2025, 9, 11) }
 
         ReflectionTestUtils.setField(converter, "timeUtils", timeUtils)
     }

@@ -13,9 +13,8 @@ import java.time.LocalDate
 @Component
 class PaceJsonToModelConverter(
     private val paceProperties: PaceProperties,
+    private val timeUtils: TimeUtils
 ) {
-
-    private val timeUtils = TimeUtils()
 
     fun convert(json: JsonNode): List<MenuModel> {
         val currentDateString = getCurrentDateString(json)
@@ -84,13 +83,11 @@ class PaceJsonToModelConverter(
         val daySelector = json.get("daySelector") ?: throw InvalidJsonFieldException("daySelector")
         if (!daySelector.isArray) throw InvalidJsonFieldException("daySelector")
 
-        val currentDateDay = timeUtils.currentDay()
-
         val currentDateString = daySelector.toList().map {
             it.get("date")?.asText(null) ?: throw InvalidJsonFieldException("date")
         }.find {
-            val jsonDay = LocalDate.parse(it).dayOfYear
-            return@find jsonDay == currentDateDay
+            val jsonDay = LocalDate.parse(it)
+            return@find timeUtils.today().isEqual(jsonDay)
         } ?: throw InvalidJsonFieldException("date (current date)")
 
         return currentDateString
