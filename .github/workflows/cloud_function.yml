@@ -1,0 +1,34 @@
+name: Cloud Function
+
+# todo replace with cron job
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  JAVA_VERSION: 21
+  DEPLOYMENT_TYPE: CLOUD_FUNCTION
+  PACE_API_KEY: ${{ secrets.PACE_API_KEY }}
+  WEBHOOK_URLS: ${{ secrets.WEBHOOK_URLS }}
+  WEBHOOK_TYPES: ${{ secrets.WEBHOOK_TYPES }}
+
+jobs:
+  build-and-test:
+    name: Run Cloud Function
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup java
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'zulu'
+          cache: 'gradle'
+
+      - name: run app
+        timeout-minutes: 30
+        run: ./gradlew bootRun
