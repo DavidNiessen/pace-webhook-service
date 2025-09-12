@@ -1,11 +1,10 @@
 name: Cloud Function
 
-# todo replace with cron job
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: 0 6 * * *
+  workflow_dispatch:
 
 env:
   JAVA_VERSION: 21
