@@ -3,7 +3,7 @@ name: Cloud Function
 
 on:
   schedule:
-    - cron: 0 6 * * *
+    - cron: 0 6 * * MON-FRI
   workflow_dispatch:
 
 env:

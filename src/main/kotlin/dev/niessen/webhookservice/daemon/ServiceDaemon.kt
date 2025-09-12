@@ -1,6 +1,7 @@
 package dev.niessen.webhookservice.daemon
 
 import dev.niessen.webhookservice.DeploymentType
+import dev.niessen.webhookservice.service.PaceService
 import jakarta.annotation.PostConstruct
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.scheduling.TaskScheduler
@@ -11,14 +12,14 @@ import org.springframework.stereotype.Service
 @Service
 @EnableScheduling
 class ServiceDaemon(
-    private val taskScheduler: TaskScheduler,
     @Value("\${application.deployment.type}") private val deploymentType: DeploymentType,
     @Value("\${application.daemon.cron_expression}") private val cronExpression: String,
-
+    private val taskScheduler: TaskScheduler,
+    private val paceService: PaceService,
 ) {
 
     private val serviceDaemon = Runnable {
-        println("SERVICE RUNNING")
+        paceService.getAndDispatchTodaysMenu()
     }
 
     @PostConstruct

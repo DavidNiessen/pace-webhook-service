@@ -85,7 +85,7 @@ class DeploymentTypePreConfigurerTest {
         }
 
         doAnswer { invocation ->
-            webApplicationType = invocation.arguments[0] as WebApplicationType?
+            webApplicationType = invocation.getArgument(0)
             Unit
         }.`when`(application).webApplicationType = any()
     }
