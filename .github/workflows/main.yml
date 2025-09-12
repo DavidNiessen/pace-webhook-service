@@ -21,7 +21,7 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: 'zulu'
-          cache: 'yarn'
+          cache: 'gradle'
 
       - name: Run tests
         timeout-minutes: 30
