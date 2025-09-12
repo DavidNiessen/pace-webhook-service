@@ -1,4 +1,4 @@
-package dev.niessen.webhookservice
+package dev.niessen.webhookservice.controller
 
 import dev.niessen.webhookservice.utils.TestUtils
 import org.hamcrest.CoreMatchers.`is`
