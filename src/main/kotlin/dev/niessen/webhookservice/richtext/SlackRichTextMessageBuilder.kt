@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component
 class SlackRichTextMessageBuilder(
     @Value("\${application.formatted-version}") val appVersion: String,
     val iconUtil: IconUtil,
-    val timeUtils: TimeUtils
+    val timeUtils: TimeUtils,
 ) : RichTextMessageBuilder {
 
     override fun webHookType() = WebHookType.SLACK
@@ -35,7 +35,11 @@ class SlackRichTextMessageBuilder(
 
                     // -- MENU ITEMS
                     grouped[restaurant]!!.sortedByDescending { it.price }.forEach { model ->
-                        sectionMrkdwn("\u2022 *${model.menuName}*${if (model.description.isNullOrBlank()) "" else ": ${model.description}"}")
+                        sectionMrkdwn(
+                            "*${model.menuName}*${
+                                if (model.description.isNullOrBlank()) "" else " - ${model.description}"
+                            }"
+                        )
 
                         if (model.price != null || model.properties.isNotEmpty()) {
                             context(
@@ -71,7 +75,7 @@ class SlackRichTextMessageBuilder(
 
             // -- FOOTER
             context(
-                MrkdwnText("Version $appVersion - $formattedDate"),
+                MrkdwnText("$appVersion - $formattedDate"),
                 MrkdwnText("<https://github.com/DavidNiessen/pace-webhook-service|source code>"),
             )
         }

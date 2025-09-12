@@ -67,7 +67,7 @@ class PaceJsonToModelConverterTest {
         val item = items.find { it.menuName == "Gegrillte Zucchini" }
         assertThat(item!!, notNullValue())
         assertThat(item.restaurant, `is`(MenuRestaurant.CANTEEN))
-        assertThat(item.description, `is`("Halloumi | Kapern-Zitronen-Dressing"))
+        assertThat(item.description, `is`("Halloumi - Kapern-Zitronen-Dressing"))
         assertThat(item.subtitle, `is`("COUNTER 1.1 Bowls_"))
         assertThat(item.price, `is`(11.0))
         // assert item properties

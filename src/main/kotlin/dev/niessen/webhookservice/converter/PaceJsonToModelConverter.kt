@@ -48,7 +48,7 @@ class PaceJsonToModelConverter(
         return MenuModel(
             menuName = menuName,
             restaurant = restaurant,
-            description = menuDescription,
+            description = menuDescription?.removeSuffix(" |")?.replace("|", "-"),
             subtitle = subtitle,
             price = price,
             properties = properties
