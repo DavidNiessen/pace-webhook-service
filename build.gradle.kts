@@ -38,6 +38,7 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
     testImplementation("org.wiremock:wiremock-standalone:3.13.1")
+    testImplementation("org.awaitility:awaitility:4.3.0")
 }
 
 kotlin {

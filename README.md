@@ -1,6 +1,6 @@
 # Pace Webhook Service
 
-This project scrapes menu data from PACE (Axel Springer) canteen and dispatches it to one or multiple webhooks.
+This project scrapes menu data from PACE (Axel Springer canteen) and dispatches it to one or multiple webhooks.
 
 ### Deployment
 
@@ -50,4 +50,4 @@ Fetch menu and dispatch via WebHooks
 > GET http://localhost:8080/api/v1/dispatch
 
 Health check
-> GET http://Localhost:8080/actuator/health
+> GET http://localhost:8080/actuator/health
