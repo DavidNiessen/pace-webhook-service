@@ -74,10 +74,7 @@ class SlackRichTextMessageBuilder(
             )
 
             // -- FOOTER
-            context(
-                MrkdwnText("$appVersion - $formattedDate"),
-                MrkdwnText("<https://github.com/DavidNiessen/pace-webhook-service|source code>"),
-            )
+            context(MrkdwnText("$appVersion - $formattedDate"))
         }
     }
 }
