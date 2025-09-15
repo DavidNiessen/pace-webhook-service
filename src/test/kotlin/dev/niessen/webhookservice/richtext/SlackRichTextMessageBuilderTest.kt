@@ -1,19 +1,16 @@
 package dev.niessen.webhookservice.richtext
 
+import dev.niessen.webhookservice.ApiMockHelper
 import dev.niessen.webhookservice.model.MenuModel
 import dev.niessen.webhookservice.model.MenuProperty.*
 import dev.niessen.webhookservice.model.MenuRestaurant.CANTEEN
 import dev.niessen.webhookservice.model.MenuRestaurant.PAPA
 import dev.niessen.webhookservice.properties.IconProperties
 import dev.niessen.webhookservice.utils.IconUtil
-import dev.niessen.webhookservice.utils.TimeUtils
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.Mockito.`when`
-import org.mockito.Spy
 import org.mockito.junit.jupiter.MockitoExtension
 import org.slf4j.LoggerFactory
 import java.time.LocalDate
@@ -23,26 +20,18 @@ class SlackRichTextMessageBuilderTest {
 
     private val logger = LoggerFactory.getLogger(javaClass)
 
-    @Spy
-    private lateinit var timeUtils: TimeUtils
-
-    private lateinit var slackRichTextMessageBuilder: SlackRichTextMessageBuilder
-
-    @BeforeEach
-    fun setup() {
-        `when`(timeUtils.today()).thenAnswer {
-            LocalDate.of(2025, 9, 12)
-        }
-
-        slackRichTextMessageBuilder = SlackRichTextMessageBuilder("v1.0.0", IconUtil(IconProperties(
-            mapOf(
-                VEGETARIAN.propertyKey to "localhost/vegetarian",
-                VEGAN.propertyKey to "localhost/vegan",
-                PORK.propertyKey to "localhost/pork",
-                // don't define url for no_sugar
+     private val slackRichTextMessageBuilder = SlackRichTextMessageBuilder(
+        "v1.0.0", IconUtil(
+            IconProperties(
+                mapOf(
+                    VEGETARIAN.propertyKey to "localhost/vegetarian",
+                    VEGAN.propertyKey to "localhost/vegan",
+                    PORK.propertyKey to "localhost/pork",
+                    // don't define url for no_sugar
+                )
             )
-        )), timeUtils)
-    }
+        ), ApiMockHelper.mockTimeUtils(LocalDate.of(2025, 9, 12))
+    )
 
     @Test
     fun `build slack menu message`() {
@@ -76,9 +65,13 @@ class SlackRichTextMessageBuilderTest {
         val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
-        assertThat(message, `is`("""
+        assertThat(
+            message, `is`(
+                """
             {"blocks":[{"type":"header","text":{"type":"plain_text","text":"Heutige Speisekarte (12.09.2025)","emoji":true}},{"type":"header","text":{"type":"plain_text","text":"Papa","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"*Rinderschmorbraten* - frisches Gemüse | Kartoffelgratin | Balsamico-Jus"}},{"type":"context","elements":[{"type":"plain_text","text":"12.00€ ","emoji":true}]},{"type":"section","text":{"type":"mrkdwn","text":"*Kichererbsen-Chili* - Quinoa | hausgemachte Röstzwiebeln"}},{"type":"context","elements":[{"type":"plain_text","text":"9.00€  ","emoji":true},{"type":"image","image_url":"localhost/vegan","alt_text":"Vegan"},{"type":"image","image_url":"localhost/vegetarian","alt_text":"Vegetarisch"}]},{"type":"header","text":{"type":"plain_text","text":"Kantine","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"*Schweinefilet* - Glasierte Äpfel | Kartoffelmousseline"}},{"type":"context","elements":[{"type":"plain_text","text":"12.00€ ","emoji":true},{"type":"image","image_url":"localhost/pork","alt_text":"Schweinefleisch"}]},{"type":"divider"},{"type":"context","elements":[{"type":"image","image_url":"localhost/vegan","alt_text":"Vegan"},{"type":"plain_text","text":"Vegan","emoji":true},{"type":"image","image_url":"localhost/vegetarian","alt_text":"Vegetarisch"},{"type":"plain_text","text":"Vegetarisch","emoji":true},{"type":"image","image_url":"localhost/pork","alt_text":"Schweinefleisch"},{"type":"plain_text","text":"Schweinefleisch","emoji":true}]},{"type":"context","elements":[{"type":"mrkdwn","text":"v1.0.0 - 12.09.2025"},{"type":"mrkdwn","text":"<https://github.com/DavidNiessen/pace-webhook-service|source code>"}]}]}
-        """.trimIndent()))
+        """.trimIndent()
+            )
+        )
     }
 
     @Test
@@ -105,9 +98,13 @@ class SlackRichTextMessageBuilderTest {
         val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
-        assertThat(message, `is`("""
+        assertThat(
+            message, `is`(
+                """
             {"blocks":[{"type":"header","text":{"type":"plain_text","text":"Heutige Speisekarte (12.09.2025)","emoji":true}},{"type":"header","text":{"type":"plain_text","text":"Papa","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"*Gemüseteller*"}},{"type":"context","elements":[{"type":"image","image_url":"localhost/vegan","alt_text":"Vegan"},{"type":"image","image_url":"localhost/pork","alt_text":"Schweinefleisch"}]},{"type":"header","text":{"type":"plain_text","text":"Kantine","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"*Rinderschmorbraten*"}},{"type":"divider"},{"type":"context","elements":[{"type":"image","image_url":"localhost/vegan","alt_text":"Vegan"},{"type":"plain_text","text":"Vegan","emoji":true},{"type":"image","image_url":"localhost/vegetarian","alt_text":"Vegetarisch"},{"type":"plain_text","text":"Vegetarisch","emoji":true},{"type":"image","image_url":"localhost/pork","alt_text":"Schweinefleisch"},{"type":"plain_text","text":"Schweinefleisch","emoji":true}]},{"type":"context","elements":[{"type":"mrkdwn","text":"v1.0.0 - 12.09.2025"},{"type":"mrkdwn","text":"<https://github.com/DavidNiessen/pace-webhook-service|source code>"}]}]}
-        """.trimIndent()))
+        """.trimIndent()
+            )
+        )
     }
 
     @Test
@@ -126,9 +123,13 @@ class SlackRichTextMessageBuilderTest {
         val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
-        assertThat(message, `is`("""
+        assertThat(
+            message, `is`(
+                """
             {"blocks":[{"type":"header","text":{"type":"plain_text","text":"Heutige Speisekarte (12.09.2025)","emoji":true}},{"type":"header","text":{"type":"plain_text","text":"Papa","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"*Gemüseteller* - description"}},{"type":"context","elements":[{"type":"plain_text","text":"150.00€","emoji":true}]},{"type":"divider"},{"type":"context","elements":[{"type":"image","image_url":"localhost/vegan","alt_text":"Vegan"},{"type":"plain_text","text":"Vegan","emoji":true},{"type":"image","image_url":"localhost/vegetarian","alt_text":"Vegetarisch"},{"type":"plain_text","text":"Vegetarisch","emoji":true},{"type":"image","image_url":"localhost/pork","alt_text":"Schweinefleisch"},{"type":"plain_text","text":"Schweinefleisch","emoji":true}]},{"type":"context","elements":[{"type":"mrkdwn","text":"v1.0.0 - 12.09.2025"},{"type":"mrkdwn","text":"<https://github.com/DavidNiessen/pace-webhook-service|source code>"}]}]}
-        """.trimIndent()))
+        """.trimIndent()
+            )
+        )
     }
 
 }

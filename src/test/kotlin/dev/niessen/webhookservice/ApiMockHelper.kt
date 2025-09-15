@@ -5,18 +5,22 @@ import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.client.WireMock
 import com.github.tomakehurst.wiremock.client.WireMock.equalTo
 import dev.niessen.webhookservice.repository.PaceRepository
+import dev.niessen.webhookservice.utils.TimeUtils
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when`
+import org.mockito.kotlin.spy
 import wiremock.org.apache.commons.io.IOUtils
 import java.nio.charset.StandardCharsets
+import java.time.LocalDate
 
 const val PACE_API_PATH_REGEX = "/api/foodfinder/list?.*"
 const val SLACK_WEBHOOK_PATH_REGEX = "/services/.*/.*/.*"
 
 object ApiMockHelper {
 
-    private val objectMapper = ObjectMapper()
+    val mockDate: LocalDate = LocalDate.of(2025, 9, 12)
 
+    private val objectMapper = ObjectMapper()
 
     fun stubForPaceApi(wireMockServer: WireMockServer) {
         val body = IOUtils.resourceToString(
@@ -78,5 +82,13 @@ object ApiMockHelper {
         }
 
         return paceRepository
+    }
+
+    fun mockTimeUtils(date: LocalDate = mockDate): TimeUtils {
+        val timeUtilsSpy = spy(TimeUtils())
+
+        `when`(timeUtilsSpy.today()).thenAnswer { date }
+
+        return timeUtilsSpy
     }
 }

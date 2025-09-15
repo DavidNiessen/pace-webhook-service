@@ -2,11 +2,11 @@ package dev.niessen.webhookservice.converter
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
+import dev.niessen.webhookservice.ApiMockHelper
 import dev.niessen.webhookservice.exception.exceptions.InvalidJsonFieldException
 import dev.niessen.webhookservice.model.MenuProperty
 import dev.niessen.webhookservice.model.MenuRestaurant
 import dev.niessen.webhookservice.properties.PaceProperties
-import dev.niessen.webhookservice.utils.TimeUtils
 import org.hamcrest.CoreMatchers.*
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.hasSize
@@ -14,10 +14,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.Mock
-import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
-import org.springframework.test.util.ReflectionTestUtils
 import wiremock.org.apache.commons.io.IOUtils
 import java.nio.charset.StandardCharsets
 import java.time.LocalDate
@@ -26,10 +23,6 @@ import java.time.LocalDate
 class PaceJsonToModelConverterTest {
 
     private val objectMapper = ObjectMapper()
-
-
-    @Mock
-    private lateinit var timeUtils: TimeUtils
 
     private lateinit var converter: PaceJsonToModelConverter
 
@@ -49,12 +42,8 @@ class PaceJsonToModelConverterTest {
                 mealtimeWhitelist = setOf("Mittagessen"),
                 menuLabelBlacklist = setOf("SAFT"),
             ),
-            TimeUtils()
+            ApiMockHelper.mockTimeUtils(LocalDate.of(2025, 9, 11))
         )
-
-        `when`(timeUtils.today()).thenAnswer { LocalDate.of(2025, 9, 11) }
-
-        ReflectionTestUtils.setField(converter, "timeUtils", timeUtils)
     }
 
     @Test

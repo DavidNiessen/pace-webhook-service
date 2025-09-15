@@ -15,9 +15,9 @@ import org.springframework.test.context.bean.override.mockito.MockitoSpyBean
 import java.time.LocalDate
 
 @Component
-abstract class IntegrationTestBase {
-
-    val mockDate: LocalDate = LocalDate.of(2025, 9, 12)
+abstract class IntegrationTestBase(
+    val mockDate: LocalDate = ApiMockHelper.mockDate,
+) {
 
     @Autowired
     private lateinit var paceRepository: PaceRepository
