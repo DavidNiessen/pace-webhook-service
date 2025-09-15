@@ -9,21 +9,40 @@ import dev.niessen.webhookservice.utils.IconUtil
 import dev.niessen.webhookservice.utils.TimeUtils
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.Mockito.`when`
+import org.mockito.Spy
+import org.mockito.junit.jupiter.MockitoExtension
 import org.slf4j.LoggerFactory
+import java.time.LocalDate
 
+@ExtendWith(MockitoExtension::class)
 class SlackRichTextMessageBuilderTest {
 
     private val logger = LoggerFactory.getLogger(javaClass)
 
-    private val slackRichTextMessageFactory = SlackRichTextMessageBuilder("v1.0.0", IconUtil(IconProperties(
-        mapOf(
-            VEGETARIAN.propertyKey to "localhost/vegetarian",
-            VEGAN.propertyKey to "localhost/vegan",
-            PORK.propertyKey to "localhost/pork",
-            // don't define url for no_sugar
-        )
-    )), TimeUtils())
+    @Spy
+    private lateinit var timeUtils: TimeUtils
+
+    private lateinit var slackRichTextMessageBuilder: SlackRichTextMessageBuilder
+
+    @BeforeEach
+    fun setup() {
+        `when`(timeUtils.today()).thenAnswer {
+            LocalDate.of(2025, 9, 12)
+        }
+
+        slackRichTextMessageBuilder = SlackRichTextMessageBuilder("v1.0.0", IconUtil(IconProperties(
+            mapOf(
+                VEGETARIAN.propertyKey to "localhost/vegetarian",
+                VEGAN.propertyKey to "localhost/vegan",
+                PORK.propertyKey to "localhost/pork",
+                // don't define url for no_sugar
+            )
+        )), timeUtils)
+    }
 
     @Test
     fun `build slack menu message`() {
@@ -54,7 +73,7 @@ class SlackRichTextMessageBuilderTest {
             )
         )
 
-        val message = slackRichTextMessageFactory.buildMessage(menu)
+        val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
         assertThat(message, `is`("""
@@ -83,7 +102,7 @@ class SlackRichTextMessageBuilderTest {
             ),
         )
 
-        val message = slackRichTextMessageFactory.buildMessage(menu)
+        val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
         assertThat(message, `is`("""
@@ -104,7 +123,7 @@ class SlackRichTextMessageBuilderTest {
             ),
         )
 
-        val message = slackRichTextMessageFactory.buildMessage(menu)
+        val message = slackRichTextMessageBuilder.buildMessage(menu)
         logger.info("\n$message")
 
         assertThat(message, `is`("""
