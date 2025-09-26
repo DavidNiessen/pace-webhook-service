@@ -3,7 +3,7 @@ name: Cloud Function
 
 on:
   schedule:
-    - cron: 30 9 * * MON-FRI
+    - cron: 0 9 * * MON-FRI
       timezone: Europe/Berlin
   workflow_dispatch:
 
